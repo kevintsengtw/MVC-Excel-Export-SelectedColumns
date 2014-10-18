@@ -4,6 +4,8 @@
 
 部落格文章連結：
 
+[ASP.NET MVC 匯出 Excel 簡單做 - 自訂匯出 Excel 檔案的檔名](http://kevintsengtw.blogspot.tw/2014/09/aspnet-mvc-excel-excel.html#.VEHrq_mSypQ)
+
 [ASP.NET MVC 匯出 Excel - 讓使用者挑選要匯出的資料欄位 Part.1](http://kevintsengtw.blogspot.tw/2014/09/aspnet-mvc-excel-part1.html#.VEHTjfmSypQ)
 
 [ASP.NET MVC 匯出 Excel - 讓使用者挑選要匯出的資料欄位 Part.2](http://kevintsengtw.blogspot.tw/2014/10/aspnet-mvc-excel-part2.html#.VEHTovmSypQ)
