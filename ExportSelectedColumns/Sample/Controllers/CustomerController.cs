@@ -52,13 +52,19 @@ namespace Sample.Controllers
 
         public ActionResult Export(string fileName, string selectedColumns)
         {
+            //取得原始資料
             var exportData = db.Customers.OrderBy(x => x.CustomerID).ToList();
 
+            //使用 AutoMapper 建立斷映轉換設定
             Mapper.CreateMap<Customer, CustomerViewModel>();
+
+            //使用 AutoMapper 將 Customer 型別的原始資料對映轉換為 CustomerViewModel 型別.
             var result = Mapper.Map<List<CustomerViewModel>>(exportData);
 
+            //使用轉換後的匯出資料與使用者所選的匯出欄位，產生作為匯出 Excel 的 DataTable.
             var dt = ExportDataHelper.GetExportDataTable(result, selectedColumns);
 
+            //決定匯出 Excel 檔案的檔名
             var exportFileName = string.IsNullOrWhiteSpace(fileName)
                 ? string.Concat(
                     "CustomerData_",
