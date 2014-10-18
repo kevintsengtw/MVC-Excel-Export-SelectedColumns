@@ -9,3 +9,5 @@
 /// <reference path="respond.matchmedia.addlistener.js" />
 /// <reference path="../content/bootstrap-modal-master/js/bootstrap-modal.js" />
 /// <reference path="../content/bootstrap-modal-master/js/bootstrap-modalmanager.js" />
+/// <reference path="alertify.min.js" />
+/// <reference path="bootstrap.min.js" />

@@ -8,7 +8,9 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")   
     <link href="~/Content/bootstrap-modal-master/css/bootstrap-modal-bs3patch.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-modal-master/css/bootstrap-modal.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-modal-master/css/bootstrap-modal.css" rel="stylesheet" />  
+    <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/themes/default.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -40,7 +42,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")    
-    <script src="~/Scripts/bootbox.min.js"></script>
+    <script src="~/Scripts/alertify.min.js"></script>
     <script src="~/Content/bootstrap-modal-master/js/bootstrap-modal.js"></script>
     <script src="~/Content/bootstrap-modal-master/js/bootstrap-modalmanager.js"></script>
     <script src="@RouteJs.RouteJsHandler.HandlerUrl"></script>

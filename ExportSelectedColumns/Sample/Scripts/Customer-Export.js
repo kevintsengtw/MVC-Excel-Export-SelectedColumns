@@ -32,7 +32,7 @@
             }).get().join(',');
 
             if (selectedColumns.length == 0) {
-                alert("必須選取匯出資料的欄位.");
+                alertify.alert("錯誤", "必須選取匯出資料的欄位.");
                 return false;
             }
 
@@ -56,7 +56,7 @@
                 if (data.Msg) {
                     HasData = data.Msg;
                     if (HasData == 'False') {
-                        alert("尚未建立任何資料, 無法匯出資料.");
+                        alertify.alert("錯誤", "尚未建立任何資料, 無法匯出資料.");
                     }
                     else {
                         window.location = exportFileName.length == 0
@@ -69,7 +69,7 @@
                 }
             },
             error: function (xhr, textStatus, errorThrown) {
-                alert("資料匯出錯誤");
+                alertify.alert("錯誤", "資料匯出錯誤");
             }
         });
     }
