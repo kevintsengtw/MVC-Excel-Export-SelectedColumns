@@ -1,0 +1,51 @@
+﻿<div id="ExportDataDialog" class="modal fade" tabindex="-1" data-width="600px" data-height="500px" style="display: none;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 id="ExportDataDialog">匯出產品資料</h4>
+    </div>
+    <div class="modal-body" style="margin-left: 5px">
+        <div class="row">
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <label for="ExportFileName">匯出資料檔名（可不填）</label>
+                    <input type="text" id="ExportFileName" name="ExportFileName" class="form-control" placeholder="可輸入中文, 不含副檔名." />
+                </div>
+            </div>
+        </div>    
+        <br/>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <label>
+                        <strong>匯出欄位</strong> (
+                        <a id="SelectAllColumns" style="cursor: pointer;">
+                            <span class="glyphicon glyphicon-ok-sign"></span> 選取全部欄位
+                        </a>
+                        <a id="UnselectAllColumns" style="cursor: pointer;">
+                            <span class=" glyphicon glyphicon-remove-sign"></span> 不選取全部欄位
+                        </a> )
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="well">
+                    @foreach (var item in (List<SelectListItem>)ViewBag.ExportColumns)
+                    {
+                        <div class="form-group col-xs-offset-1">
+                            <label class="checkbox">
+                                <input type="checkbox" id="Checkbox_ExportColumns" name="Checkbox_ExportColumns" value="@(item.Value)" checked="checked" />
+                                @(item.Text)
+                            </label>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button id="ButtonExecuteExport" class="btn btn-primary">匯出資料</button>
+        <button id="ButtonCancel" class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+    </div>
+</div>
